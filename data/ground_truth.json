@@ -1,0 +1,23 @@
+  [
+  {
+    "issue": "Water Usage Reporting",
+    "official_claim": "Gov. Gavin Newsom vetoed a separate proposal that would have required data center operators to report their water use.",
+    "contradictory_data": "The total water consumption by data centers in California increased from 25.42 billion liters in 2019 to 49.91 billion liters in 2023 — a 96.4% increase, with projections showing demand could rise as much as 358% above 2019 and 133% above 2023 levels by 2028.",
+    "source_a": "https://calmatters.org/environment/2025/11/data-center-environmental-report/",
+    "source_b": "https://www.next10.org/publications/ai-environmental-public-health-impacts"
+  },
+  {
+    "issue": "Delayed Oversight vs Rising Health Costs",
+    "official_claim": "This bill would authorize the commission to assess the extent to which electrical corporation costs associated with new loads from data centers result in cost shifts to other electrical corporation customers... and post the assessment on or before January 1, 2027.",
+    "contradictory_data": "Health costs from California’s data centers tripled from 2019 to 2023, and projections show they could rise by another 496% above 2019 and 72% above 2023 levels by 2028 unless strong mitigation policies are enacted.",
+    "source_a": "https://calmatters.digitaldemocracy.org/bills/ca_202520260sb57",
+    "source_b": "https://www.next10.org/publications/ai-environmental-public-health-impacts"
+  },
+  {
+    "issue": "Limited Environmental Reporting vs Emissions Growth",
+    "official_claim": "The only measure that became law gives regulators the authority to determine whether data centers are driving up costs — but stops short of requiring environmental reporting.",
+    "contradictory_data": "Data center emissions in California almost doubled from 1.24 million short tons in 2019 to 2.38 million in 2023, with projections of 3.55 to 5.56 million short tons by 2028.",
+    "source_a": "https://calmatters.org/environment/2025/12/data-center-energy-san-jose/",
+    "source_b": "https://www.next10.org/publications/ai-environmental-public-health-impacts"
+  }
+]
