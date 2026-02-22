@@ -68,17 +68,18 @@ class DataCenterScraper:
                     title_cell = row.find('td', class_='title')
                     if not title_cell:
                         continue
-                    
                     title = title_cell.get_text(strip=True)
                     link = title_cell.find('a')
-                    url = link['href'] if link and link.get('href') else None
-                    
-                    if url and not url.startswith('http'):
-                        url = base_url + url
-                    
+                    url = None
+                    if link and link.get('href'):
+                        url_val = link.get('href')
+                        if isinstance(url_val, list):
+                            url_val = url_val[0]
+                        url = str(url_val)
+                        if url and not url.startswith('http'):
+                            url = base_url + url
                     date_cell = row.find('td', class_='date')
                     date_str = date_cell.get_text(strip=True) if date_cell else 'N/A'
-                    
                     results.append({
                         'type': 'legistar_legislation',
                         'city': city,
@@ -127,23 +128,22 @@ class DataCenterScraper:
                     title_elem = article.find(['h3', 'h2', 'a'])
                     if not title_elem:
                         continue
-                    
                     title = title_elem.get_text(strip=True)
-                    
                     # Check if article contains relevant keywords
                     article_text = article.get_text().lower()
                     if not any(kw in article_text for kw in self.keywords):
                         continue
-                    
                     link = article.find('a')
-                    url = link['href'] if link and link.get('href') else None
-                    
-                    if url and not url.startswith('http'):
-                        url = self.base_urls[f'{source}_news'].split('/home')[0] + url
-                    
+                    url = None
+                    if link and link.get('href'):
+                        url_val = link.get('href')
+                        if isinstance(url_val, list):
+                            url_val = url_val[0]
+                        url = str(url_val)
+                        if url and not url.startswith('http'):
+                            url = self.base_urls[f'{source}_news'].split('/home')[0] + url
                     date_elem = article.find('time') or article.find(class_='date')
                     date_str = date_elem.get_text(strip=True) if date_elem else 'N/A'
-                    
                     results.append({
                         'type': 'news',
                         'source': source,
