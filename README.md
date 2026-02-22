@@ -1,4 +1,4 @@
-# Truth-Seeker Civic (Flow-Check)
+# De-Center
 
 Data-first project for identifying contradictions between official policy claims and community impact evidence about California AI/data center electricity and water usage.
 
